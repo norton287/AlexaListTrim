@@ -18,7 +18,11 @@ namespace AlexaListTrim
             using (var sr = new StreamReader(@"c:\temp\text.txt"))
             {
                 while (sr.Peek() >= 0)
+                {
                     txtString.Add(sr.ReadLine());
+                }
+
+                sr.Close();
             }
 
             foreach (var food in txtString)
