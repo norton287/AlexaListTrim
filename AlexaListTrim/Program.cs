@@ -15,38 +15,47 @@ namespace AlexaListTrim
             var txtString = new List<string>();
             var modTxtString = new List<string>();
 
-            using (var sr = new StreamReader(@"c:\temp\text.txt"))
+            if (File.Exists(@"c:\temp\text.txt"))
             {
-                while (sr.Peek() >= 0)
+                using (var sr = new StreamReader(@"c:\temp\text.txt"))
                 {
-                    txtString.Add(sr.ReadLine());
+                    while (sr.Peek() >= 0)
+                    {
+                        txtString.Add(sr.ReadLine());
+                    }
+
+                    sr.Close();
                 }
 
-                sr.Close();
-            }
-
-            foreach (var food in txtString)
-            {
-                Console.WriteLine($"Trimming: {food}");
-                if (food.Length <= 0 || (food.IndexOf(".", StringComparison.Ordinal) + 2).ToString() == string.Empty ||
-                    !food.Contains(".")) continue;
-                var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\n";
-                modTxtString.Add(newFood);
-            }
-
-            using (var sw = new StreamWriter(@"c:\temp\out.txt"))
-            {
-                foreach (var food in modTxtString)
+                foreach (var food in txtString)
                 {
-                    sw.Write(food);
+                    Console.WriteLine($"Trimming: {food}");
+                    if (food.Length <= 0 || (food.IndexOf(".", StringComparison.Ordinal) + 2).ToString() == string.Empty ||
+                        !food.Contains(".")) continue;
+                    var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\n";
+                    modTxtString.Add(newFood);
                 }
 
-                sw.Close();
-            }
+                using (var sw = new StreamWriter(@"c:\temp\out.txt"))
+                {
+                    foreach (var food in modTxtString)
+                    {
+                        sw.Write(food);
+                    }
 
-            Console.WriteLine("All done!  Press any key to start Notepad.exe");
-            Console.ReadKey();
-            Process.Start("Notepad.exe", @"c:\temp\out.txt");
+                    sw.Close();
+                }
+
+                Console.WriteLine("All done!  Press any key to start Notepad.exe");
+                Console.ReadKey();
+                Process.Start("Notepad.exe", @"c:\temp\out.txt");
+            }
+            else
+            {
+                Console.WriteLine(@"Save text.txt to c:\temp before running!");
+                Console.WriteLine(@"Press any key to exit....");
+                Console.ReadKey();
+            }
         }
     }
 }
