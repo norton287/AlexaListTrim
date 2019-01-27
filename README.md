@@ -2,6 +2,10 @@
 
 Trims saved to local drive Text.txt file exported from an Alexa List.  Trims the fluff from the list and removes the numbered entries for each list item.  It just leaves the list text.
 
+Just export the list and save it to files, choose a share to save it to in the Alexa App.  Then on a windows machine copy the file from the share to c:\temp, then launch the console app and it will read the file, strip the text, and then launch notepad with the edited entries.
+
+If the file is not found it will remark to the console to save text.txt to c:\temp and then run the console app.
+
 ## Getting Started
 I used Visual Studio Community 2017 and .NET Framework 4 to build the console app.
 ### Prerequisites
