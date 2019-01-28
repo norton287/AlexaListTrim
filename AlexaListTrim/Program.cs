@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -32,7 +33,7 @@ namespace AlexaListTrim
                     Console.WriteLine($"Trimming: {food}");
                     if (food.Length <= 0 || (food.IndexOf(".", StringComparison.Ordinal) + 2).ToString() == string.Empty ||
                         !food.Contains(".")) continue;
-                    var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\n";
+                    var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\r\n";
                     modTxtString.Add(newFood);
                 }
 
@@ -48,6 +49,7 @@ namespace AlexaListTrim
 
                 Console.WriteLine("All done!  Press any key to start Notepad.exe");
                 Console.ReadKey();
+                File.Delete(@"c:\temp\text.txt");
                 Process.Start("Notepad.exe", @"c:\temp\out.txt");
             }
             else
