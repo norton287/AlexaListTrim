@@ -24,13 +24,11 @@ namespace AlexaListTrim
                     {
                         txtString.Add(sr.ReadLine());
                     }
-
-                    sr.Close();
                 }
 
                 foreach (var food in txtString)
                 {
-                    Console.WriteLine($"Trimming: {food}");
+                    Console.WriteLine($@"Trimming: {food}");
                     if (food.Length <= 0 || (food.IndexOf(".", StringComparison.Ordinal) + 2).ToString() == string.Empty ||
                         !food.Contains(".")) continue;
                     var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\r\n";
@@ -43,8 +41,6 @@ namespace AlexaListTrim
                     {
                         sw.Write(food);
                     }
-
-                    sw.Close();
                 }
 
                 Console.WriteLine("All done!  Press any key to start Notepad.exe");
