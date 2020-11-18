@@ -1,17 +1,13 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlexaListTrim
 {
-    class Program
+	public static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var txtString = new List<string>();
             var modTxtString = new List<string>();
@@ -43,7 +39,7 @@ namespace AlexaListTrim
                     }
                 }
 
-                Console.WriteLine("All done!  Press any key to start Notepad.exe");
+                Console.WriteLine(@"All done!  Press any key to start Notepad.exe");
                 Console.ReadKey();
                 File.Delete(@"c:\temp\text.txt");
                 Process.Start("Notepad.exe", @"c:\temp\out.txt");
