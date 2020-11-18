@@ -10,10 +10,10 @@ If the file is not found it will remark to the console to save text.txt to c:\te
 I used Visual Studio Community 2017 and .NET Framework 4 to build the console app.
 ### Prerequisites
 ```
-.NET Framework 4.6.1
+.NET Framework 4.8
 ```
 ## Built With
-* [VS Community 2017](https://visualstudio.microsoft.com/downloads/) - The build software
+* [VS Enterprise 2019](https://visualstudio.microsoft.com/downloads/) - The build software
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/norton287/AlexaListTrim/tags). 
 ## Authors
@@ -22,5 +22,4 @@ See also the list of [contributors](https://github.com/norton287/AlexaListTrim/c
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 ## Acknowledgments
-* C# for being easy to learn.
-* Inspired by my need to learn to code in c#
+* Fixing what Amazon won't when exporting shopping lists from Alexa
