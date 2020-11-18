@@ -7,7 +7,7 @@ Just export the list and save it to files, choose a share to save it to in the A
 If the file is not found it will remark to the console to save text.txt to c:\temp and then run the console app.
 
 ## Getting Started
-I used Visual Studio Community 2017 and .NET Framework 4 to build the console app.
+I used Visual Studio Enterprise 2019 and .NET Framework 4 to build the console app.
 ### Prerequisites
 ```
 .NET Framework 4.8
