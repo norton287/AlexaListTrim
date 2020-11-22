@@ -5,8 +5,8 @@ using System.IO;
 
 namespace AlexaListTrim
 {
-	public static class Program
-    {
+	public static class Program 
+	{
         static void Main()
         {
             var txtString = new List<string>();
