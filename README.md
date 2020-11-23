@@ -1,4 +1,4 @@
-![.NET Core](https://github.com/spindlecrank/AlexaListTrim/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/norton287/AlexaListTrim/workflows/.NET%20Core/badge.svg)
 
 # Alexa List Trimmer Utility
 
