@@ -1,3 +1,5 @@
+![.NET Core](https://github.com/spindlecrank/AlexaListTrim/workflows/.NET%20Core/badge.svg)
+
 # Alexa List Trimmer Utility
 
 Trims saved to local drive Text.txt file exported from an Alexa List.  Trims the fluff from the list and removes the numbered entries for each list item.  It just leaves the list text.
