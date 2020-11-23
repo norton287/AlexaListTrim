@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <LangVersion>preview</LangVersion>
-    <TargetFramework>net5.0-windows7.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>AlexaListTrim</RootNamespace>
     <AssemblyName>AlexaListTrim</AssemblyName>
@@ -28,6 +28,6 @@
     <Content Include="Uiconstock-Socialmedia-Amazon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0-rc.2.20475.5" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
   </ItemGroup>
 </Project>
