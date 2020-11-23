@@ -10,7 +10,7 @@ If the file is not found it will remark to the console to save text.txt to c:\te
 I used Visual Studio Enterprise 2019 and .NET Framework 5 to build the console app.
 ### Prerequisites
 ```
-.NET Framework 5.0
+.NET Core 3.1
 ```
 ## Built With
 * [VS Enterprise 2019](https://visualstudio.microsoft.com/downloads/) - The build software
