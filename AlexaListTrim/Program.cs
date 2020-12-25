@@ -21,13 +21,14 @@ namespace AlexaListTrim
 	            }
 
 	            foreach (var food in txtString)
-                 {
-                    Console.WriteLine($@"Trimming: {food}");
-                    if (food.Length <= 0 || (food.IndexOf(".", StringComparison.Ordinal) + 2).ToString() == string.Empty ||
-                        !food.Contains(".")) continue;
-                    var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\r\n";
-                    modTxtString.Add(newFood);
-                 }
+	            {
+		            Console.WriteLine($@"Trimming: {food}");
+		            if (food.Length <= 0 ||
+		                (food.IndexOf(".", StringComparison.Ordinal) + 2).ToString() == string.Empty ||
+		                !food.Contains(".")) continue;
+		            var newFood = food.Substring(food.IndexOf(".", StringComparison.Ordinal) + 2) + "\r\n";
+		            modTxtString.Add(newFood);
+	            }
 
 	            using var sw = new StreamWriter(@"c:\temp\out.txt");
 	            foreach (var food in modTxtString)
