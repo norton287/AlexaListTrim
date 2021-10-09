@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <LangVersion>preview</LangVersion>
-    <TargetFramework>net5</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>AlexaListTrim</RootNamespace>
     <AssemblyName>AlexaListTrim</AssemblyName>
